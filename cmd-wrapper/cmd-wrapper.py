@@ -44,7 +44,8 @@ def exec_php_resource(resource, php_version, script_args=''):
 
 
 def get_http_resource(resource):
-    r = requests.get(resource)
+    requests.packages.urllib3.disable_warnings()
+    r = requests.get(resource, verify=False)  # TODO disabling that may not be clever
 
     return r.text
 
@@ -54,7 +55,8 @@ def main():
 
     php_version_default = '5.5'
 
-    regex_http = r'^https?://[A-Za-z0-9]+\.[A-Za-z]+$'
+    #regex_http = r'^https?://[A-Za-z0-9]+\.[A-Za-z]+[/]+$'
+    regex_http = r'^(https?|ftp)://[^\s/$.?#].[^\s]*$'
     regex_file = r'^(/)?([^/\0]+(/)?)+$'
     regex_phpver = r'^5\.[3-6]$'
 
