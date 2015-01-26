@@ -54,7 +54,7 @@ def main():
 
     php_version_default = '5.5'
 
-    #regex_http = r'^https?://[A-Za-z0-9]+\.[A-Za-z]+[/]+$'
+    # regex_http = r'^https?://[A-Za-z0-9]+\.[A-Za-z]+[/]+$'
     regex_http = r'^(https?|ftp)://[^\s/$.?#].[^\s]*$'
     regex_file = r'^(/)?([^/\0]+(/)?)+$'
     regex_phpver = r'^5\.[3-6]$'
