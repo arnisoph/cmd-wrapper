@@ -44,10 +44,9 @@ def exec_php_resource(resource, php_version, script_args=''):
 
 
 def get_http_resource(resource):
-    requests.packages.urllib3.disable_warnings()
     r = requests.get(resource, verify=False)  # TODO disabling that may not be clever
 
-    return r.text
+    return r.content
 
 
 def main():
