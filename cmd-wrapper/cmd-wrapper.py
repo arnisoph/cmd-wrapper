@@ -2,9 +2,14 @@
 # -*- coding: utf-8 -*-
 
 '''
+    Cron Usage Examples:
+
+        * cmd-wrapper -t php -r ~/htdocs/jobs.php -p 5.4 1>/dev/null
+        * cmd-wrapper -t http -r https://domain.de/jobs.php 1>/dev/null
+
     TODO:
 
-    * make php bin + ini path configurable
+        * make php bin + ini path configurable
 '''
 
 import argparse
