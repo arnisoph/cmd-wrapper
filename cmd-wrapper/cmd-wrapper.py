@@ -10,6 +10,7 @@
     TODO:
 
         * make php bin + ini path configurable
+        * redirect STDOUT to /dev/null by default?
 '''
 
 import argparse
